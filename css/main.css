@@ -1,0 +1,242 @@
+
+@font-face {
+    font-family: freedom;
+    src: url(../fonts/Freedom.otf) format('opentype');
+}
+
+@font-face {
+    font-family: ubuntu-r;
+    src: url(../fonts/ubuntu/Ubuntu-R.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: ubuntu-b;
+    src: url(../fonts/ubuntu/Ubuntu-B.ttf) format('truetype');
+}
+
+html,
+body,
+#wrapper {
+    position: absolute;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+#background {
+    position: absolute;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../img/Broken-glass-raindrops.jpg");
+    background-size: cover;
+    opacity: 0.75;
+}
+
+#mobilePushToPlay {
+    display: none;
+    z-index: -10;
+}
+
+#mobilePlay {
+    display: none;
+}
+
+
+@media (max-width: 640px) {
+    #mobilePushToPlay {
+        display: block;
+        position: absolute;
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(75,9,183,0.5);
+        z-index: -10;
+    }
+    
+    #mobilePlay {
+        display: block;
+        position: absolute;
+        top: 15%;
+        width: 100%;
+        height: auto;
+    }
+}
+
+#content {
+    position: relative;
+    width: 75%;
+    height: 100%;
+    margin: 0px auto;
+    padding-left: 30px;
+    color: white;
+    text-shadow: 1px 1px 5px gray;
+    z-index: 10;
+    opacity: 0.9;
+}
+    
+    header {
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+    }
+    
+    #main {
+        width:80%;
+        margin: 0px auto;
+        margin-top: 40%;
+        text-align: center;
+        font-family: ubuntu-r;
+        font-size: 1vw;
+    }
+    
+    @media (max-width: 640px) {
+        #main {
+            font-size: 3vw;
+        }
+    }
+        
+        #player {
+            width: 100%;
+        }
+    
+    footer {
+        position: absolute;
+        display: block;
+        margin: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0px;
+        opacity: 0.4;
+    }
+    
+        footer > ul {
+            display: block;
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            text-align: center;
+            width: 100%;
+        }
+        
+            footer > ul > li {
+                vertical-align: bottom;
+                margin: 10px 20px;
+                padding: 0px;
+                display: inline-block;
+                font-family: ubuntu-b;
+                font-size: 1vw;
+            }
+            
+            @media (max-width: 640px) {
+                footer > ul > li {
+                    font-size: 2vw;
+                }
+            }
+h1 {
+    margin: 0px;
+    font-family: freedom;
+    font-size: 4vw;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 10px black;
+}
+
+h2 {
+    margin: 0px;
+    text-shadow: 1px 1px 5px black;
+    font-family: ubuntu-b;
+    font-size: 2vw;
+}
+
+@media (max-width: 640px) {
+    h1 {
+        line-height: 15vh;
+        font-size: 5vw;
+    }
+    
+    h2 {
+        font-size: 4vw;
+    }
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    z-index: 20;
+    color: gray;
+    margin: 0px;
+    padding: 0px;
+    width: 8%;
+}
+
+    nav > ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+        nav > ul > li {
+            position: relative;
+            display: block;
+            background-color: rgba(0,0,0,0.5);
+            padding: 0px 10px;
+            margin: 1px 0px;
+            font-family: freedom;
+            font-size: 2vw;
+            letter-spacing: 3px;
+            cursor: default;
+            overflow: visible;
+            width: 100%;
+            transition: background-color 0.125s, color 0.125s;
+        }
+        
+        nav > ul > li:hover {
+            background-color: rgba(0,0,0,0.6);
+            cursor: pointer;
+        }
+        
+        .active {
+            color: white;
+            background-color: rgba(20,0,40,0.6) !important;
+        }
+        
+        .vCenter {
+            position: absolute;
+            display: block;
+            top: 25%;
+        }
+
+#copyright {
+    display: block;
+    opacity: 0.4;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+audio {
+    background-color: transparent;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: purple;
+}
